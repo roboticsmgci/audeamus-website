@@ -4,6 +4,8 @@ import type { Entry } from 'contentful';
 import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+export const revalidate = 60;
+
 export default async function BlogPost({ params }: { params: { slug: string }}) {
   const { slug } = params;
 
