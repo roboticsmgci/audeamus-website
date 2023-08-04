@@ -8,11 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'team-photo': 'linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 1)), url("/team.webp")',
       },
     },
   },
   plugins: [],
-}
+};
