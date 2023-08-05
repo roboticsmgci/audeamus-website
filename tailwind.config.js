@@ -11,6 +11,11 @@ module.exports = {
         'team-photo': 'linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 1)), url("/team.webp")',
       },
     },
+    minHeight: {
+      xl: '36rem',
+      '2xl': '42rem',
+      '3xl': '48rem',
+    },
   },
   plugins: [],
 };

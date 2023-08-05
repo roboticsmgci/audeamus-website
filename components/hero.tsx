@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export default function Hero() {
   return (
-    <div className="px-6 pt-6 lg:px-8 bg-team-photo bg-cover bg-no-repeat bg-center h-screen">
+    <div className="px-6 sm:px-6 pt-6 lg:px-8 bg-team-photo bg-cover bg-no-repeat bg-center h-screen min-h-2xl">
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-50 ring-1 ring-gray-100/10 hover:ring-white/20">
@@ -21,19 +23,19 @@ export default function Hero() {
             We are the robotics team at Marc Garneau Collegiate Institute, a high school based in
             Toronto, Ontario and part of the Toronto District School Board.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-5">
+            <Link
               href="/about"
-              className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="w-96 sm:w-auto rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Members
-            </a>
-            <a
+            </Link>
+            <Link
               href="/sponsors"
-              className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="w-96 sm:w-auto rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Sponsors
-            </a>
+            </Link>
           </div>
         </div>
       </div>
