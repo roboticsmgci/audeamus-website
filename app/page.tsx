@@ -13,7 +13,7 @@ export default async function Home() {
         </div>
       </HomeSection>
       <HomeSection title="Recent Results">
-        <RecentResults />
+        {/* <RecentResults /> */}
       </HomeSection>
     </>
   );
