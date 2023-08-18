@@ -14,7 +14,7 @@ export default async function Home() {
           <h2 className={classNames('text-3xl font-bold mb-1', styles.redOutline)}>AUDEAMUS</h2>
           <h2 className={classNames('text-3xl font-bold', styles.redOutline)}>FRC 8574</h2>
         </div>
-        <p className="text-center text-2xl md:text-3xl mt-4 mb-8 mx-5">
+        <p className="text-center text-2xl md:text-3xl mt-4 mb-8 px-5 max-w-3xl mx-auto">
           We are the robotics team based in Marc Garneau Collegiate Institute, a high school based
           in Toronto, Ontario, and a part of the Toronto District School Board.
         </p>
