@@ -17,8 +17,8 @@ const navigation = [
 ];
 
 const socialMedia = [
-  { name: 'instagram', image: '/instagram.png', href: 'https://www.instagram.com/mgci_robotics/' },
-  { name: 'discord', image: '/discord.svg', href: 'https://discord.gg/ZsFRezU74a' },
+  { name: 'instagram', image: '/instagram-white.svg', href: 'https://www.instagram.com/mgci_robotics/' },
+  { name: 'discord', image: '/discord-white.svg', href: 'https://discord.gg/ZsFRezU74a' },
 ];
 
 export default function Navbar() {
@@ -70,7 +70,7 @@ export default function Navbar() {
                     href={item.href}
                     aria-current={currentHref === item.href ? 'page' : undefined}
                   >
-                    <Image height={48} width={48} src={item.image} alt={item.name} />
+                    <Image height={40} width={40} src={item.image} alt={item.name} />
                   </Link>
                 ))}
               </div>
@@ -103,7 +103,7 @@ export default function Navbar() {
                     aria-current={currentHref === item.href ? 'page' : undefined}
                     className="p-2 flex items-center"
                   >
-                    <Image src={item.image} height={24} width={24} alt={item.name} />
+                    <Image src={item.image} height={32} width={32} alt={item.name} />
                   </Disclosure.Button>
                 ))}
               </div>
