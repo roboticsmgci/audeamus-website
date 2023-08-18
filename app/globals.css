@@ -60,8 +60,8 @@ body {
   background: repeating-linear-gradient(
     -50deg,
     #313137,
-    #313137 50px,
-    #2c2c32 50px,
-    #2c2c32 90px
+    #313137 40px,
+    #2c2c32 40px,
+    #2c2c32 100px
   );
 }

@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import Navbar from '@/components/navbar';
 import './globals.css';
 
-const barlow = Barlow_Semi_Condensed({ weight: ['400', '700'], subsets: ['latin'] });
+const barlow = Barlow_Semi_Condensed({ weight: ['400', '700'], subsets: ['latin'], style: ['normal', 'italic'] });
 
 export const metadata: Metadata = {
   title: 'MGCI Robotics',

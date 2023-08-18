@@ -5,3 +5,11 @@
 .redOutline {
   text-shadow: 2px 2px rgb(220, 38, 38), 2px -2px rgb(220, 38, 38), -2px -2px rgb(220, 38, 38), -2px 2px rgb(220, 38, 38);
 }
+
+.textShadow {
+  text-shadow: 2px 2px #000;
+}
+
+.dropShadow {
+  filter: drop-shadow(5px 5px 0 #111);
+}
