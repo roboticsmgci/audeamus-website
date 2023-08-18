@@ -1,6 +1,8 @@
 import getRecentMatches from '@/lib/tba';
 import MatchResults from './match-results';
 
+export const revalidate = 60;
+
 export default async function RecentResults() {
   const recentMatches = await getRecentMatches(2);
 

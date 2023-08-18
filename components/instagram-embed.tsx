@@ -22,5 +22,5 @@ export default function InstagramEmbed({ embedHtml }: InstagramEmbedProps) {
     };
   });
 
-  return <div className="w-full" dangerouslySetInnerHTML={{ __html: embedHtml }}></div>;
+  return <div className="mx-auto overflow-hidden max-w-lg" dangerouslySetInnerHTML={{ __html: embedHtml }}></div>;
 }
