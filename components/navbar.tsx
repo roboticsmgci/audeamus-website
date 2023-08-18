@@ -25,7 +25,7 @@ export default function Navbar() {
   const currentHref = usePathname();
 
   return (
-    <Disclosure as="nav" className="bg-red-600 fixed w-full top-0 z-10">
+    <Disclosure as="nav" className="bg-red-600 w-full">
       {({ open }) => (
         <>
           <div className="relative flex h-16 items-center justify-between">
@@ -55,7 +55,7 @@ export default function Navbar() {
                     href={item.href}
                     className={classNames(
                       currentHref === item.href ? 'bg-red-700 text-xl' : 'hover:text-gray-200 text-lg',
-                      'rounded-full px-3 py-2 text-white font-medium',
+                      'rounded-full px-3 py-2 text-white font-bold',
                     )}
                     aria-current={currentHref === item.href ? 'page' : undefined}
                   >
@@ -66,11 +66,11 @@ export default function Navbar() {
               <div className="hidden sm:ml-6 sm:flex space-x-4 items-center mr-5">
                 {socialMedia.map((item) => (
                   <Link
-                    key={item.image}
+                    key={item.name}
                     href={item.href}
                     aria-current={currentHref === item.href ? 'page' : undefined}
                   >
-                    <Image height={48} width={48} src={item.image} />
+                    <Image height={48} width={48} src={item.image} alt={item.name} />
                   </Link>
                 ))}
               </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
               <div className="flex flex-wrap px-2">
                 {socialMedia.map((item) => (
                   <Disclosure.Button
-                    key={item.image}
+                    key={item.name}
                     as={Link}
                     href={item.href}
                     target="_blank"

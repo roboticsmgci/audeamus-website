@@ -1,0 +1,7 @@
+.redShadow {
+  text-shadow: 5px 5px rgb(220, 38, 38);
+}
+
+.redOutline {
+  text-shadow: 2px 2px rgb(220, 38, 38), 2px -2px rgb(220, 38, 38), -2px -2px rgb(220, 38, 38), -2px 2px rgb(220, 38, 38);
+}

@@ -3,47 +3,47 @@
 @tailwind utilities;
 
 .blog-post h1 {
-	@apply text-4xl font-bold mb-2;
+  @apply text-4xl font-bold mb-2;
 }
 
 .blog-post h2 {
-	@apply text-3xl font-bold mb-2;
+  @apply text-3xl font-bold mb-2;
 }
 
 .blog-post h3 {
-	@apply text-2xl font-bold mb-2;
+  @apply text-2xl font-bold mb-2;
 }
 
 .blog-post h4 {
-	@apply text-xl font-bold mb-2;
+  @apply text-xl font-bold mb-2;
 }
 
 .blog-post h5 {
-	@apply text-lg font-bold mb-2;
+  @apply text-lg font-bold mb-2;
 }
 
 .blog-post h6 {
-	@apply font-bold mb-2;
+  @apply font-bold mb-2;
 }
 
 .blog-post p {
-	@apply mb-4 mt-4;
+  @apply mb-4 mt-4;
 }
 
 .blog-post table {
-	@apply border border-collapse w-full table-auto;
+  @apply border border-collapse w-full table-auto;
 }
 
 .blog-post th {
-	@apply border text-left px-4;
+  @apply border text-left px-4;
 }
 
 .blog-post td {
-	@apply border px-4;
+  @apply border px-4;
 }
 
 .blog-post blockquote {
-	@apply bg-gray-700 border-l-8 border-l-gray-500 m-4 px-4 py-2;
+  @apply bg-gray-700 border-l-8 border-l-gray-500 m-4 px-4 py-2;
 }
 
 .blog-post blockquote:before {
@@ -54,4 +54,14 @@
   margin-right: 0.25em;
   vertical-align: -0.6em;
   font-family: serif;
+}
+
+body {
+  background: repeating-linear-gradient(
+    -50deg,
+    #313137,
+    #313137 50px,
+    #2c2c32 50px,
+    #2c2c32 90px
+  );
 }
