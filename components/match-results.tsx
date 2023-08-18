@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 // eslint-disable-next-line
 import { Roboto_Mono } from 'next/font/google';
+import Link from 'next/link';
 import { StopIcon } from '@heroicons/react/24/outline';
 import { MatchSimple } from '@/types/tba';
-import Link from 'next/link';
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] });
 
