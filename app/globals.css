@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "GlacialIndifference-Bold";
+    src: url("../public/GlacialIndifference-Bold.otf");
+}
