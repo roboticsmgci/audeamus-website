@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @font-face {
     font-family: "GlacialIndifference-Bold";
     src: url("../public/GlacialIndifference-Bold.otf");
-}
-
+=======
 .blog-post h1 {
   @apply text-4xl font-bold mb-2;
 }
@@ -69,4 +69,5 @@ body {
     #2c2c32 40px,
     #2c2c32 100px
   );
+>>>>>>> a7f7680e617c3bef6770d34692a2bc97f13b4a3e
 }

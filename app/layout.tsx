@@ -1,11 +1,12 @@
-import Navbar from '@/components/navbar';
-import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+// eslint-disable-next-line camelcase
+import { Barlow_Semi_Condensed } from 'next/font/google';
 import React from 'react';
 import classNames from 'classnames';
+import Navbar from '@/components/navbar';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const barlow = Barlow_Semi_Condensed({ weight: ['400', '700'], subsets: ['latin'], style: ['normal', 'italic'] });
 
 export const metadata: Metadata = {
   title: 'MGCI Robotics',
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-CA">
-      <body className={classNames(inter.className, 'bg-gray-800 text-white')}>
+      <body className={classNames(barlow.className, 'text-white')}>
         <Navbar />
         {children}
       </body>

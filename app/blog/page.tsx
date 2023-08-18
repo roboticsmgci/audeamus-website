@@ -1,8 +1,8 @@
-import contentfulClient from '@/lib/contentful';
-import { BlogPostSkeleton } from '@/types/contentful';
 import type { Asset, AssetFile } from 'contentful';
 import Image from 'next/image';
 import Link from 'next/link';
+import contentfulClient from '@/lib/contentful';
+import { BlogPostSkeleton } from '@/types/contentful';
 
 export const revalidate = 60;
 
