@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="grid grid-cols-4">
       <main className="col-span-4 lg:col-span-3">
-        <div className="px-2 w-full h-96 overflow-hidden bg-[url('/team-blurred.webp')] bg-cover bg-center flex flex-col items-center justify-center">
+        <div className="font-glacialindifferencebold px-2 w-full h-96 overflow-hidden bg-[url('/team-blurred.webp')] bg-cover bg-center flex flex-col items-center justify-center">
           <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>MGCI ROBOTICS</h1>
           <h2 className={classNames('text-3xl font-bold mb-1', styles.redOutline)}>AUDEAMUS</h2>
           <h2 className={classNames('text-3xl font-bold', styles.redOutline)}>FRC 8574</h2>
@@ -26,9 +26,12 @@ export default async function Home() {
           <div className="col-span-3 sm:col-span-2">
             <h3 className={classNames('text-4xl font-bold italic text-center mb-2', styles.textShadow)}>Wanna join?</h3>
             <p className="text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie
-              dapibus nibh, nec molestie mi semper nec. Integer interdum congue lorem, sit amet
-              sagittis eros tempor quis.
+            We're no strangers to love
+You know the rules and so do I (do I)
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
+I just wanna tell you how I'm feeling
+Gotta make you understand
             </p>
           </div>
           <div className="col-span-3 h-96 sm:h-auto sm:col-span-1 relative">
@@ -39,9 +42,12 @@ export default async function Home() {
           <div className="col-span-3 sm:col-span-2">
             <h3 className={classNames('text-4xl font-bold italic text-center mb-2', styles.textShadow)}>Competition History</h3>
             <p className="text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie
-              dapibus nibh, nec molestie mi semper nec. Integer interdum congue lorem, sit amet
-              sagittis eros tempor quis.
+            Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
             </p>
           </div>
           <div className="col-span-3 h-96 sm:h-auto sm:col-span-1 relative">
