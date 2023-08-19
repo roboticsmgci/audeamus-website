@@ -11,7 +11,7 @@ module.exports = {
         'team-photo': 'linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 1)), url("/team.webp")',
       },
       fontFamily: {
-        glacialindifferencebold: ["GlacialIndifference-Bold", "sans-serif"]
+        glacialindifferencebold: ['GlacialIndifference-Bold', 'sans-serif'],
       },
     },
     minHeight: {

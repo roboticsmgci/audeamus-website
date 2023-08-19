@@ -1,7 +1,5 @@
 import classNames from 'classnames';
-import Link from 'next/link';
 import styles from '../home.module.css';
-import Image from 'next/image';
 
 export default async function About() {
   return (

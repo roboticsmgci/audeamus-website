@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb-base", "next/core-web-vitals"],
   "rules": {
+    "linebreak-style": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
