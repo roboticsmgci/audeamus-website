@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import styles from '../home.module.css';
 import Image from 'next/image';
+import styles from '../home.module.css';
 
 export default async function Sponsors() {
   return (
@@ -12,9 +12,10 @@ export default async function Sponsors() {
         </div>
       </div>
       <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
-          <p className="text-2xl font-bold text-center mt-4 mb-8 px-5 max-w-5xl mx-auto">
-          For new potential sponsors, you can download our Sponsorship Package and Team Resume, as well as view our Sponsorship Tiers.
-          </p>
+        <p className="text-2xl font-bold text-center mt-4 mb-8 px-5 max-w-5xl mx-auto">
+          For new potential sponsors, you can download our Sponsorship Package and Team Resume,
+          as well as view our Sponsorship Tiers.
+        </p>
       <div className="flex flex-wrap justify-center sm:justify-between gap-x-5 gap-y-4 px-4 max-w-5xl mx-auto">
         <Link className="sm:ml-5 md:ml-28 text-3xl bg-red-700 px-3 py-2 font-bold italic rounded-lg" href="/about">View Members</Link>
         <Link className="sm:mr-5 md:mr-28 text-3xl bg-purple-700 px-3 py-2 font-bold italic rounded-lg" href="/sponsors">View Sponsors</Link>
