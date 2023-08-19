@@ -12,7 +12,7 @@ export default async function Sponsors() {
         </div>
       </div>
       <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
-      <p className="text-2xl font-bold text-center mt-4 mb-8 px-5 max-w-5xl mx-auto">
+      <p className="text-2xl font-bold text-center mt-4 mb-8 px-5 max-w-4xl mx-auto">
       For new potential sponsors, you can download our Sponsorship Package and Team Resume, as well as view our Sponsorship Tiers.
       </p>
       <h4 className={classNames('text-6xl font-bold mb-4 mt-4 max-w-5xl mx-auto', styles.titleShadow)}>TIERS</h4>

@@ -70,3 +70,8 @@ body {
     #2c2c32 100px
   );
 }
+
+@font-face {
+  font-family: "GlacialIndifference-Bold";
+  src: url("../public/GlacialIndifference-Bold.otf");
+}

@@ -26,11 +26,11 @@ export default async function Home() {
           <div className="col-span-3 sm:col-span-2">
             <h3 className={classNames('text-4xl font-bold italic text-center mb-2', styles.textShadow)}>Wanna join?</h3>
             <p className="text-2xl">
-            We're no strangers to love
+            We&apos;re no strangers to love
 You know the rules and so do I (do I)
-A full commitment's what I'm thinking of
-You wouldn't get this from any other guy
-I just wanna tell you how I'm feeling
+A full commitment&apos;s what I&apos;m thinking of
+You wouldn&apos;t get this from any other guy
+I just wanna tell you how I&apos;m feeling
 Gotta make you understand
             </p>
           </div>
