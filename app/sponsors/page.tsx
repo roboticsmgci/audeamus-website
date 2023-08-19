@@ -52,7 +52,7 @@ export default async function Sponsors() {
             <li>- What if Platinum &gt; Gold</li>
             <li>- Consider moving</li>
             <li>- buttons above tiers</li>
-            <li>- Italics makes me think it's a link</li>
+            <li>- Italics makes me think it&apos;s a link</li>
           </ul>
         </div>
       </div>
