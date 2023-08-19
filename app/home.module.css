@@ -10,6 +10,10 @@
   text-shadow: 2px 2px #000;
 }
 
+.titleShadow {
+  text-shadow: 5px 5px #000;
+}
+
 .dropShadow {
   filter: drop-shadow(5px 5px 0 #111);
 }
