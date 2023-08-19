@@ -2,6 +2,7 @@ import type { MatchSimple } from '@/types/tba';
 
 // Note that eTag functionality will only work in production (not in dev mode)
 let eTag: string | undefined;
+let lastResponse: MatchSimple[] | undefined;
 
 type TBAHeaders = {
   'If-None-Match'?: string;
@@ -24,7 +25,13 @@ export default async function getRecentMatches(count: number) {
 
   eTag = response.headers.get('ETag')!;
 
-  let data: MatchSimple[] = await response.json();
+  let data;
+  if (response.status === 304) {
+    data = lastResponse as MatchSimple[];
+  } else {
+    data = await response.json() as MatchSimple[];
+    lastResponse = data;
+  }
 
   const currentTime = new Date().getTime() / 1000;
 
