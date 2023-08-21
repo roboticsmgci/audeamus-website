@@ -1,56 +1,86 @@
-import type { Asset, AssetFile } from 'contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 import contentfulClient from '@/lib/contentful';
 import { BlogPostSkeleton } from '@/types/contentful';
+import classNames from 'classnames';
+import { BLOCKS, Node } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from '../home.module.css';
 
 export const revalidate = 60;
 
-export default async function Blog() {
-  const entries = await contentfulClient.getEntries<BlogPostSkeleton>({ content_type: 'blogPost' });
+const renderOptions = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (
+      <Image
+        src={`https://${node.data.target.fields.file.url}`}
+        height={node.data.target.fields.file.details.image.height}
+        width={node.data.target.fields.file.details.image.width}
+        alt={node.data.target.fields.description}
+      />
+    ),
+  },
+};
 
-  const newestBlogPost = entries.items[0];
-  const olderBlogPosts = entries.items.slice(1);
+export default async function Blog() {
+  const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<BlogPostSkeleton>({
+    content_type: 'blogPost',
+    order: ['-fields.date'],
+  });
+
+  const blogPosts = entries.items;
 
   return (
-    <div className="container mx-auto mt-24 px-72">
-      <h1 className="text-5xl text-white mb-5">Blog</h1>
-
-      <Link href={`/blog/${newestBlogPost.fields.slug}`} className="group block w-full overflow-hidden rounded-xl bg-black text-gray-300">
-        <div className="relative h-96 overflow-hidden">
-          <Image
-            alt="Cover image"
-            src={`https:${((newestBlogPost.fields.coverImage! as Asset).fields.file! as AssetFile).url}`}
-            fill={true}
-            className="object-cover group-hover:scale-105 transition-transform"
-          />
+    <>
+      <div className="font-glacialindifferencebold px-2 w-full h-60 overflow-hidden bg-[url('/blog-image.webp')] bg-cover bg-center flex flex-col items-center justify-center">
+        <div className="w-full h-full flex justify-center items-center">
+          <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>BLOG</h1>
         </div>
-        <div className="h-40 p-5">
-          <p className="text-sm">{new Date(newestBlogPost.fields.date).toDateString()}</p>
-          <h2 className="mt-1 text-3xl font-bold">{newestBlogPost.fields.title}</h2>
-          <p className="mt-2">{newestBlogPost.fields.excerpt}</p>
-        </div>
-      </Link>
-
-      <div className="flex flex-wrap justify-between mt-8">
-        {olderBlogPosts.map((blogPost) => (
-          <Link className="group w-full md:w-96 rounded-xl overflow-hidden bg-black text-gray-300" key={blogPost.fields.slug} href={`/blog/${blogPost.fields.slug}`}>
-            <div className="relative h-96 overflow-hidden">
-              <Image
-                alt="Cover image"
-                src={`https:${((blogPost.fields.coverImage! as Asset).fields.file! as AssetFile).url}`}
-                fill={true}
-                className="object-cover group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <div className="h-40 p-5">
-              <p className="text-sm">{new Date(blogPost.fields.date).toDateString()}</p>
-              <h2 className="mt-1 text-3xl font-bold">{blogPost.fields.title}</h2>
-              <p className="mt-2">{blogPost.fields.excerpt}</p>
-            </div>
-          </Link>
-        ))}
       </div>
-    </div>
+      <div className="container mx-auto grid grid-cols-5 gap-x-10">
+        <main className="col-span-4">
+          {blogPosts.map((blogPost) => (
+            <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
+              <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
+                <Image src="/logo-black-bg.png" alt="test" className="rounded-full" width={86} height={86} />
+                <div className="grow pl-4">
+                  <h2 className="text-5xl font-bold mb-2">
+                    {blogPost.fields.title}&nbsp;
+                    <span className="text-lg font-normal">({blogPost.fields.subteam?.fields.name})</span>
+                  </h2>
+                  <h3 className="text-lg italic">
+                    By: {blogPost.fields.author?.fields.name}
+                  </h3>
+                </div>
+                <div className="font-bold text-2xl">{new Date(blogPost.fields.date).toDateString()}</div>
+              </div>
+              <div className="bg-black blog-post p-4">
+                {documentToReactComponents(blogPost.fields.content, renderOptions)}
+              </div>
+              <div className="bg-black italic p-4">
+                {blogPost.fields.author?.fields.name},&nbsp;
+                {new Date(blogPost.fields.date).toLocaleDateString('en-CA')},&nbsp;
+                {new Date(blogPost.fields.date).toLocaleTimeString('en-CA')},&nbsp;
+                {blogPost.fields.subteam?.fields.name}
+              </div>
+            </div>
+          ))}
+        </main>
+        <div className="bg-black mt-5 rounded-3xl p-4 self-start pb-10">
+          <h2 className="text-3xl font-bold">Blog Posts</h2>
+          {blogPosts.map((blogPost) => (
+            <div className="mt-5" key={blogPost.fields.slug}>
+              <Link href={`#${blogPost.fields.slug}`}>
+                <h2 className="text-2xl font-bold hover:underline">{blogPost.fields.title}</h2>
+              </Link>
+              <p className="italic">
+                {blogPost.fields.author?.fields.name},&nbsp;
+                {new Date(blogPost.fields.date).toDateString()}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
