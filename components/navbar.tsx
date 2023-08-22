@@ -25,7 +25,7 @@ export default function Navbar() {
   const currentHref = usePathname();
 
   return (
-    <Disclosure as="nav" className="bg-red-600 w-full sticky top-0">
+    <Disclosure as="nav" className="bg-red-600 w-full sticky top-0 z-10">
       {({ open }) => (
         <>
           <div className="relative flex h-16 items-center justify-between">
