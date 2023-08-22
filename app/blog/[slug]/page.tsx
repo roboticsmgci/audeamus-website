@@ -45,7 +45,7 @@ export default async function BlogPost({ params }: { params: { slug: string }}) 
   const blogPost = response.items[0];
 
   return (
-    <div className="container mt-10 mx-auto text-gray-300 px-10 sm:px-28 md:px-48 lg:px-60 xl:px-96">
+    <div className="container mt-10 mx-auto text-white px-10 sm:px-28 md:px-48 lg:px-60 xl:px-96">
       <Link className="hover:underline" href="/blog">&lt; Back to Blogs</Link>
       <h1 className="text-5xl font-bold my-2">{blogPost.fields.title}</h1>
       <p className="text-lg">By {(blogPost.fields.author as Entry<AuthorSkeleton>).fields.name as string}</p>
