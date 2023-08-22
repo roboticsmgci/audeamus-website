@@ -7,10 +7,11 @@ type BlogImageProps = {
   height: number;
   width: number;
   description: string;
+  className: string;
 }
 
 export default function BlogImage({
-  url, height, width, description,
+  url, height, width, description, className,
 }: BlogImageProps) {
   return (
     <Image
@@ -19,6 +20,7 @@ export default function BlogImage({
       height={height}
       width={width}
       alt={description}
+      className={className}
     />
   );
 }
