@@ -2,19 +2,20 @@ import type { Entry } from 'contentful';
 import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
-import Image from 'next/image';
 import Link from 'next/link';
 import contentfulClient from '@/lib/contentful';
 import { AuthorSkeleton, BlogPostSkeleton } from '@/types/contentful';
+import BlogImage from '@/components/blog-image';
 
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (
-      <Image
-        src={`https://${node.data.target.fields.file.url}`}
+      <BlogImage
+        url={`https://${node.data.target.fields.file.url}`}
         height={node.data.target.fields.file.details.image.height}
         width={node.data.target.fields.file.details.image.width}
-        alt={node.data.target.fields.description}
+        description={node.data.target.fields.description}
+        className=""
       />
     ),
   },
