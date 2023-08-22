@@ -22,10 +22,21 @@ const renderOptions = {
   },
 };
 
+export async function generateStaticParams() {
+  const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<BlogPostSkeleton>({ content_type: 'blogPost' });
+
+  return entries.items.map((blogPost) => ({
+    slug: blogPost.fields.slug,
+  }));
+}
+
 export default async function BlogPost({ params }: { params: { slug: string }}) {
   const { slug } = params;
 
-  const response = await contentfulClient.getEntries<BlogPostSkeleton>({ content_type: 'blogPost', 'fields.slug[in]': [slug] });
+  const response = await contentfulClient.withoutUnresolvableLinks.getEntries<BlogPostSkeleton>({
+    content_type: 'blogPost',
+    'fields.slug[in]': [slug],
+  });
 
   if (response.items.length === 0) {
     notFound();
