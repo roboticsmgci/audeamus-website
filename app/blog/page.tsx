@@ -37,22 +37,25 @@ export default async function Blog() {
           <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>BLOG</h1>
         </div>
       </div>
-      <div className="container mx-auto grid grid-cols-5 gap-x-10">
-        <main className="col-span-4">
-          {blogPosts.map((blogPost) => (
+      <div className="container mx-auto grid grid-cols-4 gap-x-10 px-5">
+        <main className="order-last lg:order-none col-span-4 lg:col-span-3">
+          {blogPosts.slice(0, 2).map((blogPost) => (
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
-                <Image src="/logo-black-bg.png" alt="test" className="rounded-full" width={86} height={86} />
-                <div className="grow pl-4">
-                  <h2 className="text-5xl font-bold mb-2">
+                <Image src="/logo-black-bg.png" alt="test" className="rounded-full hidden sm:block" width={86} height={86} />
+                <div className="grow px-4">
+                  <h2 className="text-3xl sm:text-5xl font-bold mb-2">
                     {blogPost.fields.title}&nbsp;
                     <span className="text-lg font-normal">({blogPost.fields.subteam?.fields.name})</span>
                   </h2>
                   <h3 className="text-lg italic">
                     By: {blogPost.fields.author?.fields.name}
                   </h3>
+                  <h3 className="text-lg italic block sm:hidden">
+                    {new Date(blogPost.fields.date).toDateString()}
+                  </h3>
                 </div>
-                <div className="font-bold text-2xl">{new Date(blogPost.fields.date).toDateString()}</div>
+                <div className="font-bold text-2xl sm:block hidden">{new Date(blogPost.fields.date).toDateString()}</div>
               </div>
               <div className="bg-black blog-post p-4">
                 {documentToReactComponents(blogPost.fields.content, renderOptions)}
@@ -66,19 +69,21 @@ export default async function Blog() {
             </div>
           ))}
         </main>
-        <div className="bg-black mt-5 rounded-3xl p-4 self-start pb-10">
-          <h2 className="text-3xl font-bold">Blog Posts</h2>
-          {blogPosts.map((blogPost) => (
-            <div className="mt-5" key={blogPost.fields.slug}>
-              <Link href={`#${blogPost.fields.slug}`}>
-                <h2 className="text-2xl font-bold hover:underline">{blogPost.fields.title}</h2>
-              </Link>
-              <p className="italic">
-                {blogPost.fields.author?.fields.name},&nbsp;
-                {new Date(blogPost.fields.date).toDateString()}
-              </p>
-            </div>
-          ))}
+        <div className="col-span-4 lg:col-span-1 bg-black mt-5 rounded-3xl p-4 self-start pb-10">
+          <h2 className="text-3xl font-bold">Other Blog Posts</h2>
+          <div className="flex flex-wrap gap-5 lg:block">
+            {blogPosts.slice(2).map((blogPost) => (
+              <div className="mt-5 w-full sm:w-2/5 lg:w-full" key={blogPost.fields.slug}>
+                <Link href={`/blog/${blogPost.fields.slug}`}>
+                  <h2 className="text-2xl font-bold hover:underline">{blogPost.fields.title}</h2>
+                </Link>
+                <p className="italic">
+                  {blogPost.fields.author?.fields.name},&nbsp;
+                  {new Date(blogPost.fields.date).toDateString()}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

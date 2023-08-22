@@ -8,35 +8,35 @@
 }
 
 .blog-post h1 {
-  @apply text-4xl font-bold mb-2;
+  @apply text-5xl font-bold mb-2;
 }
 
 .blog-post h2 {
-  @apply text-3xl font-bold mb-2;
+  @apply text-4xl font-bold mb-2;
 }
 
 .blog-post h3 {
-  @apply text-2xl font-bold mb-2;
+  @apply text-3xl font-bold mb-2;
 }
 
 .blog-post h4 {
-  @apply text-xl font-bold mb-2;
+  @apply text-2xl font-bold mb-2;
 }
 
 .blog-post h5 {
-  @apply text-lg font-bold mb-2;
+  @apply text-xl font-bold mb-2;
 }
 
 .blog-post h6 {
-  @apply font-bold mb-2;
+  @apply text-lg font-bold mb-2;
 }
 
 .blog-post p {
-  @apply mb-4 mt-4;
+  @apply text-lg mb-4 mt-4;
 }
 
 .blog-post table {
-  @apply border border-collapse w-full table-auto;
+  @apply border border-collapse w-full table-auto overflow-x-scroll block;
 }
 
 .blog-post th {
@@ -48,17 +48,11 @@
 }
 
 .blog-post blockquote {
-  @apply bg-gray-700 border-l-8 border-l-gray-500 m-4 px-4 py-2;
+  @apply bg-gray-700 border-l-8 border-l-gray-500 my-4 sm:mx-4 px-4 py-2;
 }
 
 .blog-post blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.6em;
-  font-family: serif;
+  @apply text-gray-300 content-['“'] text-8xl leading-[0] font-serif align-[-4rem];
 }
 
 body {
