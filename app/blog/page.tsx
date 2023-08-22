@@ -7,8 +7,6 @@ import { BlogPostSkeleton } from '@/types/contentful';
 import BlogImage from '@/components/blog-image';
 import styles from '../home.module.css';
 
-export const revalidate = 60;
-
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (

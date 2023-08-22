@@ -7,8 +7,6 @@ import Link from 'next/link';
 import contentfulClient from '@/lib/contentful';
 import { AuthorSkeleton, BlogPostSkeleton } from '@/types/contentful';
 
-export const revalidate = 60;
-
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (
