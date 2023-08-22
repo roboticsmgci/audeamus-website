@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import classNames from 'classnames';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -43,7 +43,13 @@ export default async function Blog() {
           {blogPosts.slice(0, 2).map((blogPost) => (
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
-                <Image src="/logo-black-bg.png" alt="test" className="rounded-full hidden sm:block" width={86} height={86} />
+                <Image
+                  src={`https://${blogPost.fields.author!.fields.profilePicture!.fields.file!.url}`}
+                  alt={blogPost.fields.author!.fields.name}
+                  className="rounded-full hidden sm:block"
+                  width={86}
+                  height={86}
+                />
                 <div className="grow px-4">
                   <h2 className="text-3xl sm:text-5xl font-bold mb-2">
                     {blogPost.fields.title}&nbsp;
