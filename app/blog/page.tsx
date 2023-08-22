@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import contentfulClient from '@/lib/contentful';
-import { BlogPostSkeleton } from '@/types/contentful';
 import classNames from 'classnames';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import contentfulClient from '@/lib/contentful';
+import { BlogPostSkeleton } from '@/types/contentful';
 import styles from '../home.module.css';
 
 export const revalidate = 60;

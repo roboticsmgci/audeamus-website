@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
 import Image from 'next/image';
+import Link from 'next/link';
 import contentfulClient from '@/lib/contentful';
 import { AuthorSkeleton, BlogPostSkeleton } from '@/types/contentful';
-import Link from 'next/link';
 
 export const revalidate = 60;
 
