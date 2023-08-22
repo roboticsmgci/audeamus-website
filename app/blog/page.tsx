@@ -5,6 +5,7 @@ import { BLOCKS, Node } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import contentfulClient from '@/lib/contentful';
 import { BlogPostSkeleton } from '@/types/contentful';
+import BlogImage from '@/components/blog-image';
 import styles from '../home.module.css';
 
 export const revalidate = 60;
@@ -12,12 +13,11 @@ export const revalidate = 60;
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (
-      <Image
-        loader={() => node.data.target.fields.file.url}
-        src={`https://${node.data.target.fields.file.url}`}
+      <BlogImage
+        url={`https://${node.data.target.fields.file.url}`}
         height={node.data.target.fields.file.details.image.height}
         width={node.data.target.fields.file.details.image.width}
-        alt={node.data.target.fields.description}
+        description={node.data.target.fields.description}
       />
     ),
   },
