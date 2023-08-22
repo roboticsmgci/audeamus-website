@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath } from 'next/cache';
 
 export const runtime = 'edge';
 
@@ -11,7 +11,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 });
   }
 
-  revalidateTag('blog');
+  revalidatePath('/blog');
+  revalidatePath('/blog/[slug]');
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
