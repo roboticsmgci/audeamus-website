@@ -14,7 +14,8 @@ export default async function Sponsors() {
           as well as view our Sponsorship Tiers.
         </p>
         <h4 className={classNames('text-6xl font-bold mb-4 mt-4', styles.titleShadow)}>TIERS</h4>
-        <div className="grid grid-cols-4 mt-6 mb-10">
+        <h5 className='text-5xl font-bold mb-20 mt-4'>Coming Soon!</h5>
+        {/* <div className="grid grid-cols-4 mt-6 mb-10">
           <div className="col-span-4 lg:col-span-1 mb-3">
             <div className="text-4xl font-bold text-[#B2935B] mb-1">COPPER</div>
             <ul className="text-2xl font-bold">
@@ -45,16 +46,17 @@ export default async function Sponsors() {
           <div className="col-span-4 lg:col-span-1 mb-3">
             <div className="text-4xl font-bold text-[#FFD700] mb-1">GOLD</div>
             <ul className="text-2xl font-bold">
-              <li>- Copper &gt; Aluminium</li>
-              <li>- Where Bronze</li>
-              <li>- What if Platinum &gt; Gold</li>
-              <li>- Should buttons</li>
-              <li>- be above tiers?</li>
-              <li>- Italics makes me think it&apos;s a link</li>
+              <li>- am</li>
+              <li>- ae</li>
+              <li>- a</li>
+              <li>- as</li>
+              <li>- a</li>
+              <li>- a</li>
             </ul>
           </div>
-        </div>
+        </div> */}
         <h4 className={classNames('text-6xl font-bold mb-4 mt-4', styles.titleShadow)}>CURRENT SPONSORS</h4>
+        <h5 className='text-5xl font-bold mb-20 mt-4'>Coming Soon!</h5>
         <div className="grid grid-cols-2 mx-auto max-w-5xl">
           <div className="flex items-center flex-col col-span-2 lg:col-span-1 mb-5">
             <h3 className={classNames('text-3xl font-bold mb-2', styles.textShadow)}>Download our Sponsorship Package:</h3>
