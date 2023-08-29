@@ -41,13 +41,15 @@ export default async function Blog() {
           {blogPosts.slice(0, 2).map((blogPost) => (
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
-                <BlogImage
-                  url={`https://${blogPost.fields.author!.fields.profilePicture!.fields.file!.url}`}
-                  description="test"
-                  className="rounded-full hidden sm:block"
-                  width={86}
-                  height={86}
-                />
+                {blogPost.fields.author?.fields.profilePicture && (
+                  <BlogImage
+                    url={`https://${blogPost.fields.author!.fields.profilePicture!.fields.file!.url}`}
+                    description="test"
+                    className="rounded-full hidden sm:block"
+                    width={86}
+                    height={86}
+                  />
+                )}
                 <div className="grow px-4">
                   <h2 className="text-3xl sm:text-5xl font-bold mb-2">
                     {blogPost.fields.title}&nbsp;
