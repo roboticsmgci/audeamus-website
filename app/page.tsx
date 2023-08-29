@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="grid grid-cols-4">
       <main className="col-span-4 lg:col-span-3">
-        <div className="font-glacialindifferencebold px-2 w-full h-96 overflow-hidden relative">
+        <div className="font-glacialindifferencebold w-full h-96 overflow-hidden relative">
           <Image src="/team.webp" fill className="object-cover" alt="Team photo" priority />
           <div className="w-full h-full flex flex-col justify-center items-center backdrop-blur-md">
             <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>MGCI ROBOTICS</h1>
