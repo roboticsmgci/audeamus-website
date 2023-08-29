@@ -6,7 +6,7 @@ import styles from '../home.module.css';
 export default async function Sponsors() {
   return (
     <>
-      <PageTitle imageSrc="/team.webp" title="SPONSORS" />
+      <PageTitle imageSrc="/team.webp" title="SPONSORS" imageAlt="Team photo" />
       <div className="container mx-auto px-5 max-w-5xl">
         <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
         <p className="text-2xl font-bold text-center mt-4 mb-8 px-5">
