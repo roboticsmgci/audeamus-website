@@ -6,7 +6,7 @@ import styles from '../home.module.css';
 export default async function Sponsors() {
   return (
     <div>
-      <div className="font-glacialindifferencebold px-2 w-full h-60 overflow-hidden bg-[url('/team.webp')] bg-cover bg-center flex flex-col items-center justify-center">
+      <div className="font-glacialindifferencebold w-full h-60 overflow-hidden bg-[url('/team.webp')] bg-cover bg-center flex flex-col items-center justify-center">
         <div className="w-full h-full flex justify-center items-center backdrop-blur-md">
           <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>SPONSORS</h1>
         </div>
