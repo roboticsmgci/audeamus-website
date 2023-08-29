@@ -9,10 +9,13 @@ export default async function Home() {
   return (
     <div className="grid grid-cols-4">
       <main className="col-span-4 lg:col-span-3">
-        <div className="font-glacialindifferencebold px-2 w-full h-96 overflow-hidden bg-[url('/team-blurred.webp')] bg-cover bg-center flex flex-col items-center justify-center">
-          <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>MGCI ROBOTICS</h1>
-          <h2 className={classNames('text-3xl font-bold mb-1', styles.redOutline)}>AUDEAMUS</h2>
-          <h2 className={classNames('text-3xl font-bold', styles.redOutline)}>FRC 8574</h2>
+        <div className="font-glacialindifferencebold px-2 w-full h-96 overflow-hidden relative">
+          <Image src="/team.webp" fill className="object-cover" alt="Team photo" />
+          <div className="w-full h-full flex flex-col justify-center items-center backdrop-blur-md">
+            <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>MGCI ROBOTICS</h1>
+            <h2 className={classNames('text-3xl font-bold mb-1', styles.redOutline)}>AUDEAMUS</h2>
+            <h2 className={classNames('text-3xl font-bold', styles.redOutline)}>FRC 8574</h2>
+          </div>
         </div>
         <p className="text-center text-2xl md:text-3xl mt-4 mb-8 px-5 max-w-3xl mx-auto">
           We are the robotics team based in Marc Garneau Collegiate Institute, a high school based

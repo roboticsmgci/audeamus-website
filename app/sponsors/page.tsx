@@ -1,15 +1,12 @@
 import classNames from 'classnames';
 import Link from 'next/link';
+import PageTitle from '@/components/page-title';
 import styles from '../home.module.css';
 
 export default async function Sponsors() {
   return (
     <>
-      <div className="font-glacialindifferencebold w-full h-60 overflow-hidden bg-[url('/team.webp')] bg-cover bg-center flex flex-col items-center justify-center">
-        <div className="w-full h-full flex justify-center items-center backdrop-blur-md">
-          <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>SPONSORS</h1>
-        </div>
-      </div>
+      <PageTitle imageSrc="/team.webp" title="SPONSORS" />
       <div className="container mx-auto px-5 max-w-5xl">
         <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
         <p className="text-2xl font-bold text-center mt-4 mb-8 px-5">

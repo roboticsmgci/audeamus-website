@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import classNames from 'classnames';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import contentfulClient from '@/lib/contentful';
 import { BlogPostSkeleton } from '@/types/contentful';
 import BlogImage from '@/components/blog-image';
-import styles from '../home.module.css';
+import PageTitle from '@/components/page-title';
 
 const renderOptions = {
   renderNode: {
@@ -31,11 +30,7 @@ export default async function Blog() {
 
   return (
     <>
-      <div className="font-glacialindifferencebold px-2 w-full h-60 overflow-hidden bg-[url('/blog-image.webp')] bg-cover bg-center flex flex-col items-center justify-center">
-        <div className="w-full h-full flex justify-center items-center">
-          <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>BLOG</h1>
-        </div>
-      </div>
+      <PageTitle imageSrc="/blog-image.webp" title="BLOG" imageAlt="Team photo" />
       <div className="container mx-auto grid grid-cols-4 gap-x-10 px-5">
         <main className="order-last lg:order-none col-span-4 lg:col-span-3">
           {blogPosts.slice(0, 2).map((blogPost) => (
@@ -43,7 +38,7 @@ export default async function Blog() {
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
                 {blogPost.fields.author?.fields.profilePicture && (
                   <BlogImage
-                    url={`https://${blogPost.fields.author!.fields.profilePicture!.fields.file!.url}`}
+                    url={`https://${blogPost.fields.author.fields.profilePicture.fields.file!.url}`}
                     description="test"
                     className="rounded-full hidden sm:block"
                     width={86}

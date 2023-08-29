@@ -1,14 +1,9 @@
-import classNames from 'classnames';
-import styles from '../home.module.css';
+import PageTitle from '@/components/page-title';
 
 export default async function About() {
   return (
     <div>
-      <div className="font-glacialindifferencebold w-full h-60 overflow-hidden bg-[url('/image-placeholder.gif')] bg-fill bg-center flex flex-col items-center justify-center">
-        <div className="w-full h-full flex justify-center items-center backdrop-blur-md">
-          <h1 className={classNames('text-center align-middle text-6xl sm:text-8xl font-bold mb-2', styles.redShadow)}>ABOUT US</h1>
-        </div>
-      </div>
+      <PageTitle imageSrc="/image-placeholder.gif" title="ABOUT US" imageAlt="Placeholder image" />
     </div>
   );
 }
