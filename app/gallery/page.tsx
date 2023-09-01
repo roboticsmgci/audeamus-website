@@ -8,7 +8,7 @@ export default function Gallery() {
     const redirect = setTimeout(() => {
       window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
     }, 5000);
-    return () => clearTimeout(redirect)
+    return () => clearTimeout(redirect);
   }, []);
 
   return (
