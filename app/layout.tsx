@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-CA">
-      <body className={classNames(barlow.className, 'text-white')}>
+      <body className={classNames(barlow.className, 'text-white min-h-screen')}>
         <Navbar />
         {children}
       </body>

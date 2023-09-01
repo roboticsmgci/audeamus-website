@@ -13,11 +13,11 @@ module.exports = {
       fontFamily: {
         glacialindifferencebold: ['GlacialIndifference-Bold', 'sans-serif'],
       },
-    },
-    minHeight: {
-      xl: '36rem',
-      '2xl': '42rem',
-      '3xl': '48rem',
+      minHeight: {
+        xl: '36rem',
+        '2xl': '42rem',
+        '3xl': '48rem',
+      },
     },
   },
   plugins: [],

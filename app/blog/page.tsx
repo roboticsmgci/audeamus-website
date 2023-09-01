@@ -1,5 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { BLOCKS, Node } from '@contentful/rich-text-types';
+import React from 'react';
+import {
+  BLOCKS, INLINES, Node,
+} from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import contentfulClient from '@/lib/contentful';
 import { BlogPostSkeleton } from '@/types/contentful';
@@ -16,6 +20,14 @@ const renderOptions = {
         description={node.data.target.fields.description}
         className=""
       />
+    ),
+    [INLINES.HYPERLINK]: (node: Node, children: React.ReactNode) => (
+      <Link
+        className="text-red-600 underline hover:text-red-400"
+        href={node.data.uri}
+      >
+        {children}
+      </Link>
     ),
   },
 };
@@ -37,9 +49,9 @@ export default async function Blog() {
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
                 {blogPost.fields.author?.fields.profilePicture && (
-                  <BlogImage
-                    url={`https://${blogPost.fields.author.fields.profilePicture.fields.file!.url}`}
-                    description="test"
+                  <Image
+                    src={`https://${blogPost.fields.author.fields.profilePicture.fields.file!.url}`}
+                    alt={`${blogPost.fields.author.fields.name}'s profile picture`}
                     className="rounded-full hidden sm:block"
                     width={86}
                     height={86}
@@ -86,6 +98,7 @@ export default async function Blog() {
               </div>
             ))}
           </div>
+          {blogPosts.length <= 2 && <p className="italic mt-2">No other blog posts yet...</p>}
         </div>
       </div>
     </>
