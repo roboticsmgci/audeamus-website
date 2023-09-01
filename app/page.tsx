@@ -5,6 +5,8 @@ import InstagramEmbed from '@/components/instagram-embed';
 import RecentResults from '@/components/recent-results';
 import styles from './home.module.css';
 
+export const revalidate = 120;
+
 export default async function Home() {
   return (
     <div className="grid grid-cols-4">
