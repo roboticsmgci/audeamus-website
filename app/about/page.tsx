@@ -5,9 +5,10 @@ import PageTitle from '@/components/page-title';
 
 export default function About() {
   useEffect(() => {
-    setTimeout(() => {
+    const redirect = setTimeout(() => {
       window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
     }, 5000);
+    return () => clearTimeout(redirect)
   }, []);
 
   return (
