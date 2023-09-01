@@ -29,17 +29,17 @@ export default function MatchResults({ match }: MatchResultsProps) {
           {new Date(matchDate).toDateString()}
         </div>
       </div>
-      <div className={classNames('flex flex-row justify-between', { 'font-extrabold': match.winning_alliance === 'red' })}>
+      <div className={classNames('flex flex-row justify-between text-base lg:text-sm xl:text-base', { 'font-extrabold': match.winning_alliance === 'red' })}>
         <div>
           <StopIcon className="inline-block h-6 w-6 stroke-none fill-red-800" />
-          {match.alliances!.red.team_keys.map((teamKey) => teamKey.slice(3)).join(' - ')}
+          {match.alliances!.red.team_keys.map((teamKey) => teamKey.slice(3)).join('-')}
         </div>
         <div className="w-10">{match.alliances!.red.score}</div>
       </div>
-      <div className={classNames('flex flex-row justify-between', { 'font-extrabold': match.winning_alliance === 'blue' })}>
+      <div className={classNames('flex flex-row justify-between text-base lg:text-sm xl:text-base', { 'font-extrabold': match.winning_alliance === 'blue' })}>
         <div>
           <StopIcon className="inline-block h-6 w-6 stroke-none fill-blue-800" />
-          {match.alliances!.blue.team_keys.map((teamKey) => teamKey.slice(3)).join(' - ')}
+          {match.alliances!.blue.team_keys.map((teamKey) => teamKey.slice(3)).join('-')}
         </div>
         <div className="w-10">{match.alliances!.blue.score}</div>
       </div>
