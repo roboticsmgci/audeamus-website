@@ -1,5 +1,5 @@
-import PageTitle from '@/components/page-title';
 import Link from 'next/link';
+import PageTitle from '@/components/page-title';
 
 export default function Contact() {
   return (
