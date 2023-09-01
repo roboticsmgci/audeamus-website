@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -49,9 +48,9 @@ export default async function Blog() {
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
                 {blogPost.fields.author?.fields.profilePicture && (
-                  <Image
-                    src={`https://${blogPost.fields.author.fields.profilePicture.fields.file!.url}`}
-                    alt={`${blogPost.fields.author.fields.name}'s profile picture`}
+                  <BlogImage
+                    url={`https://${blogPost.fields.author.fields.profilePicture.fields.file!.url}`}
+                    description={`${blogPost.fields.author.fields.name}'s profile picture`}
                     className="rounded-full hidden sm:block"
                     width={86}
                     height={86}
