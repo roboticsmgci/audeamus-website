@@ -59,11 +59,11 @@ export default async function Sponsors() {
         <h5 className='text-5xl font-bold mb-20 mt-4'>Coming Soon!</h5>
         <div className="grid grid-cols-2 mx-auto max-w-5xl">
           <div className="flex items-center flex-col col-span-2 lg:col-span-1 mb-5">
-            <h3 className={classNames('text-3xl font-bold mb-2', styles.textShadow)}>Sponsorship Package (2023-24):</h3>
+            <h3 className={classNames('text-3xl font-bold mb-2 text-center', styles.textShadow)}>Sponsorship Package (2023-24):</h3>
             <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="https://www.canva.com/design/DAFswsSx8JE/NlbL44Xb3XBvQyx2oSS7oA/view?utm_content=DAFswsSx8JE&utm_campaign=designshare&utm_medium=link&utm_source=viewer">View</Link>
           </div>
           <div className="flex items-center flex-col col-span-2 lg:col-span-1 mb-5">
-            <h3 className={classNames('text-3xl font-bold mb-2', styles.textShadow)}>Team Resume (2022-23):</h3>
+            <h3 className={classNames('text-3xl font-bold mb-2 text-center', styles.textShadow)}>Team Resume (2022-23):</h3>
             <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="https://drive.google.com/file/d/1-5_cYtey7JWUA3WLOh7Jf0NZTYrpoT9H/view?usp=sharing">View</Link>
           </div>
         </div>
