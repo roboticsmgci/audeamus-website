@@ -1,11 +1,19 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
 import PageTitle from '@/components/page-title';
 
-export default async function About() {
-  redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+export default function About() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    }, 5000);
+  }, []);
+
   return (
     <div>
-      <PageTitle imageSrc="/image-placeholder.gif" title="ABOUT US" imageAlt="Placeholder image" />
+      <PageTitle imageSrc="/image-placeholder.gif" title="ABOUT" imageAlt="Placeholder image" />
+      <p className="text-3xl text-center mt-5">Page is not implemented yet. Redirecting in 5 seconds...</p>
     </div>
   );
 }
