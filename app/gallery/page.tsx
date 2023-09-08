@@ -1,20 +1,31 @@
-'use client';
-
-import { useEffect } from 'react';
 import PageTitle from '@/components/page-title';
+import contentfulClient from '@/lib/contentful';
+import { AlbumSkeleton } from '@/types/contentful';
+import Image from 'next/image';
 
-export default function Gallery() {
-  useEffect(() => {
-    const redirect = setTimeout(() => {
-      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    }, 5000);
-    return () => clearTimeout(redirect);
-  }, []);
+export default async function Gallery() {
+  const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({
+    content_type: 'album',
+  });
 
   return (
-    <div>
-      <PageTitle imageSrc="/image-placeholder.gif" title="GALLERY" imageAlt="Placeholder image" />
-      <p className="text-3xl text-center mt-5">Page is not implemented yet. Redirecting in 5 seconds...</p>
-    </div>
+    <>
+      <PageTitle imageSrc="/flex.png" title="GALLERY" imageAlt="Placeholder image" />
+      <main className="flex justify-center gap-10 p-10">
+        {entries.items.map((album) => (
+          <div key={album.fields.slug} className="relative w-80">
+            <div className="w-72 h-72 relative">
+              {album.fields.images.length > 0
+                && <Image src={`https:${album.fields.images[0]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" />}
+            </div>
+            <div className="w-72 h-72 absolute -z-10 top-12 left-8">
+              {album.fields.images.length > 1
+                && <Image src={`https:${album.fields.images[1]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" />}
+            </div>
+            <h2 className="mt-16 text-3xl text-center font-bold w-full">{album.fields.title}</h2>
+          </div>
+        ))}
+      </main>
+    </>
   );
 }
