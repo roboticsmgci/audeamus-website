@@ -7,12 +7,12 @@ export async function POST(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
   const secret = requestHeaders.get('x-vercel-reval-key');
 
-  if (secret !== process.env.CONTENTFUL_REVALIDATE_SECRET_BLOG) {
+  if (secret !== process.env.CONTENTFUL_REVALIDATE_SECRET_GALLERY) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 });
   }
 
-  revalidatePath('/blog');
-  revalidatePath('/blog/[slug]');
+  revalidatePath('/gallery');
+  revalidatePath('/gallery/[slug]');
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
