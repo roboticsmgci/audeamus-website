@@ -14,7 +14,7 @@ export default async function Gallery() {
       <PageTitle imageSrc="/flex.png" title="GALLERY" imageAlt="Placeholder image" />
       <main className="flex justify-center gap-10 p-10">
         {entries.items.map((album) => (
-          <Link href={`/gallery/${album.fields.slug}`} key={album.fields.slug} className="relative w-80 group">
+          <Link href={`/gallery/${album.fields.slug}`} key={album.fields.slug} className="relative w-80 group hover:brightness-90 transition">
             <div className="w-72 h-72 relative">
               {album.fields.images.length > 0
                 && <Image src={`https:${album.fields.images[0]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" />}
