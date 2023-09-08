@@ -32,9 +32,15 @@ export default async function BlogPost({ params }: { params: { slug: string }}) 
       <Link className="block mt-3 mb-1 hover:underline" href="/gallery">&lt; Back to Gallery</Link>
       <h1 className="text-4xl font-bold">{album.fields.title}</h1>
       <div className="my-5 md:gap-5 grid grid-cols-3">
-        <GalleryColumn images={album.fields.images.slice(0, numOfImages / 3)} />
-        <GalleryColumn images={album.fields.images.slice(numOfImages / 3, (numOfImages / 3) * 2)} />
-        <GalleryColumn images={album.fields.images.slice((numOfImages / 3) * 2)} />
+        <GalleryColumn
+          images={album.fields.images.slice(0, numOfImages / 3 + 1)}
+        />
+        <GalleryColumn
+          images={album.fields.images.slice(numOfImages / 3 + 1, (numOfImages / 3) * 2 + 1)}
+        />
+        <GalleryColumn
+          images={album.fields.images.slice((numOfImages / 3) * 2 + 1)}
+        />
       </div>
     </main>
   );
