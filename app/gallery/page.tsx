@@ -7,6 +7,7 @@ import Link from 'next/link';
 export default async function Gallery() {
   const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({
     content_type: 'album',
+    order: ['-sys.createdAt'],
   });
 
   return (
