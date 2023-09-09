@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPost({ params }: { params: { slug: string }}) {
+export default async function Album({ params }: { params: { slug: string }}) {
   const { slug } = params;
 
   const response = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({
@@ -31,10 +31,10 @@ export default async function BlogPost({ params }: { params: { slug: string }}) 
   const breakpoint2 = Math.ceil((numOfImages / 3) * 2);
 
   return (
-    <main className="mx-5 md:w-[47.5rem] lg:w-[62.5rem] xl:w-[74.5rem] md:mx-auto">
+    <main className="mx-5 md:w-[47rem] lg:w-[59rem] xl:w-[77rem] md:mx-auto">
       <Link className="block mt-3 mb-1 hover:underline" href="/gallery">&lt; Back to Gallery</Link>
       <h1 className="text-4xl font-bold">{album.fields.title}</h1>
-      <div className="my-5 md:gap-5 grid grid-cols-3">
+      <div className="my-5 md:gap-10 grid grid-cols-3">
         <GalleryColumn
           images={album.fields.images.slice(0, breakpoint1)}
         />
