@@ -27,19 +27,22 @@ export default async function BlogPost({ params }: { params: { slug: string }}) 
   const album = response.items[0];
   const numOfImages = album.fields.images.length;
 
+  const breakpoint1 = Math.ceil(numOfImages / 3);
+  const breakpoint2 = Math.ceil((numOfImages / 3) * 2);
+
   return (
     <main className="mx-5 md:w-[47.5rem] lg:w-[62.5rem] xl:w-[74.5rem] md:mx-auto">
       <Link className="block mt-3 mb-1 hover:underline" href="/gallery">&lt; Back to Gallery</Link>
       <h1 className="text-4xl font-bold">{album.fields.title}</h1>
       <div className="my-5 md:gap-5 grid grid-cols-3">
         <GalleryColumn
-          images={album.fields.images.slice(0, numOfImages / 3 + 1)}
+          images={album.fields.images.slice(0, breakpoint1)}
         />
         <GalleryColumn
-          images={album.fields.images.slice(numOfImages / 3 + 1, (numOfImages / 3) * 2 + 1)}
+          images={album.fields.images.slice(breakpoint1, breakpoint2)}
         />
         <GalleryColumn
-          images={album.fields.images.slice((numOfImages / 3) * 2 + 1)}
+          images={album.fields.images.slice(breakpoint2)}
         />
       </div>
     </main>

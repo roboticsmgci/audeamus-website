@@ -24,11 +24,11 @@ export default async function Gallery() {
           <Link href={`/gallery/${album.fields.slug}`} key={album.fields.slug} className="relative w-60 sm:w-80 group hover:brightness-90 transition">
             <div className="w-52 h-52 sm:w-72 sm:h-72 relative">
               {album.fields.images.length > 0
-                && <Image src={`https:${album.fields.images[0]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" />}
+                && <Image src={`https:${album.fields.images[0]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" sizes="(max-width: 639px) 13rem, 18rem" />}
             </div>
             <div className="w-52 h-52 sm:w-72 sm:h-72 absolute -z-10 top-12 left-8">
               {album.fields.images.length > 1
-                && <Image src={`https:${album.fields.images[1]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" />}
+                && <Image src={`https:${album.fields.images[1]!.fields.file!.url}`} fill className="object-cover" alt="Cover image" sizes="(max-width: 639px) 13rem, 18rem" />}
             </div>
             <h2 className="mt-16 text-3xl text-center font-bold w-full group-hover:underline">{album.fields.title}</h2>
           </Link>
