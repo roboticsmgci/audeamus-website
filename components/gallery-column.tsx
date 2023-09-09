@@ -17,7 +17,10 @@ export default function GalleryColumn({ images }: GalleryColumnProps) {
             alt={image!.fields.title || 'Album image'}
             src={`https:${image!.fields.file!.url}`}
             fill
-            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 14rem, (max-width: 1279px) 18rem, 24rem"
+            sizes="(max-width: 767px) 100vw,
+                   (max-width: 1023px) 14rem,
+                   (max-width: 1279px) 18rem,
+                   24rem"
           />
         </div>
       ))}
