@@ -26,3 +26,12 @@ export type BlogPostSkeleton = {
     subteam: contentful.EntryFieldTypes.EntryLink<SubteamSkeleton>
   }
 }
+
+export type AlbumSkeleton = {
+  contentTypeId: 'album'
+  fields: {
+    title: contentful.EntryFieldTypes.Text
+    slug: contentful.EntryFieldTypes.Text
+    images: contentful.EntryFieldTypes.Array<contentful.EntryFieldTypes.AssetLink>
+  }
+}
