@@ -1,31 +1,84 @@
 import classNames from 'classnames';
 import Link from 'next/link';
+import { StarIcon } from '@heroicons/react/24/solid';
 import PageTitle from '@/components/page-title';
 import styles from '../home.module.css';
+
+const tiers = [
+  { name: 'Small Business*', minAmount: 300, style: 'text-[#DA70DE]' },
+  { name: 'Bronze', minAmount: 200, style: 'text-[#B2935B]' },
+  { name: 'Silver', minAmount: 500, style: 'text-[#C0C0C0]' },
+  { name: 'Gold', minAmount: 1000, style: 'text-[#FFD700]' },
+  { name: 'Diamond', minAmount: 2500, style: 'text-[#B9F2FF]' },
+];
+
+const benefits = [
+  { name: 'Newsletter', tiers: [true, true, true, true, true] },
+  { name: 'Name and Logo on Website', tiers: [true, true, true, true, true] },
+  { name: 'Social Media Shoutout', tiers: [true, true, true, true, true] },
+  { name: 'Logo on Banner', tiers: [true, true, true, true, true] },
+  { name: 'Logo and Company Contact or Hyperlink on Website', tiers: [true, false, true, true, true] },
+  { name: 'Logo on Merchandise (Shirts and Hoodies)', tiers: [false, false, true, true, true] },
+  { name: 'Verbal Recognition at Competition', tiers: [false, false, false, true, true] },
+  { name: 'Framed Team Photo', tiers: [false, false, false, true, true] },
+  { name: 'Provided Logo Sticker Displayed on Robot', tiers: [false, false, false, false, true] },
+  { name: 'Logo Emphasis on Merchandise', tiers: [false, false, false, false, true] },
+  { name: 'Distribution of Business Cards or Flyers at Competition', tiers: [true, false, false, false, true] },
+];
 
 export default async function Sponsors() {
   return (
     <>
       <PageTitle imageSrc="/team.webp" title="SPONSORS" imageAlt="Team photo" />
-      <div className="container mx-auto px-5 max-w-5xl">
+      <div className="container mx-auto px-5">
         <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
         <p className="text-2xl font-bold text-center mt-4 mb-8 px-5">
           For new potential sponsors, you can download our Sponsorship Package and Team Resume,
           as well as view our Sponsorship Tiers.
         </p>
         <h4 className={classNames('text-6xl font-bold mb-4 mt-4', styles.titleShadow)}>TIERS</h4>
-        <h5 className='text-5xl font-bold mb-20 mt-4'>Coming Soon!</h5>
-        {/* <div className="grid grid-cols-4 mt-6 mb-10">
-          <div className="col-span-4 lg:col-span-1 mb-3">
-            <div className="text-4xl font-bold text-[#B2935B] mb-1">COPPER</div>
+        {/* <table className="text-lg">
+          <thead>
+            <tr>
+              <th className="w-60 border-2 p-2"></th>
+              {tiers.map((tier) => (
+                <th className={classNames('w-36 border-2', tier.style)} key={tier.name}>{tier.name}<br />${tier.minAmount}+</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {benefits.map((benefit) => (
+              <tr key={benefit.name}>
+                <td className="border-2 p-2">{benefit.name}</td>
+                {benefit.tiers.map((tier, i) => (
+                  <td key={i} className="border-2 p-2">{tier && <StarIcon className="w-4 h-4 mx-auto" />}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table> */}
+        <div className="grid grid-cols-5 mt-6 mb-10">
+          <div className="col-span-5 lg:col-span-1 mb-3">
+            <div className="text-4xl font-bold text-[#CF50CF] mb-1">SMALL BUSINESS ($300+)</div>
+            <ul className="list-disc list-outside ml-6">
+              <li>Newsletter</li>
+              <li>Name and logo on website</li>
+              <li>Social media shoutout</li>
+              <li>Logo on banner</li>
+              <li>Logo and company contact or hyperlink on website</li>
+              <li>Distribution of business cards or flyers at competition</li>
+            </ul>
+          </div>
+          <div className="col-span-5 lg:col-span-1 mb-3">
+            <div className="text-4xl font-bold text-[#B2935B] mb-1">BRONZE</div>
             <ul className="text-2xl font-bold">
               <li>- Never gonna</li>
               <li>- Give you up</li>
               <li>- Let you down</li>
             </ul>
           </div>
-          <div className="col-span-4 lg:col-span-1 mb-3">
-            <div className="text-4xl font-bold text-[#DDDDDD] mb-1">ALUMINIUM</div>
+          <div className="col-span-5 lg:col-span-1 mb-3">
+            <div className="text-4xl font-bold text-[#C0C0C0] mb-1">SILVER</div>
             <ul className="text-2xl font-bold">
               <li>- Never gonna</li>
               <li>- Give you up</li>
@@ -33,8 +86,8 @@ export default async function Sponsors() {
               <li>- Run around</li>
             </ul>
           </div>
-          <div className="col-span-4 lg:col-span-1 mb-3">
-            <div className="text-4xl font-bold text-[#C0C0C0] mb-1">SILVER</div>
+          <div className="col-span-5 lg:col-span-1 mb-3">
+            <div className="text-4xl font-bold text-[#FFD700] mb-1">GOLD</div>
             <ul className="text-2xl font-bold">
               <li>- Never gonna</li>
               <li>- Give you up</li>
@@ -43,8 +96,8 @@ export default async function Sponsors() {
               <li>- Desert you</li>
             </ul>
           </div>
-          <div className="col-span-4 lg:col-span-1 mb-3">
-            <div className="text-4xl font-bold text-[#FFD700] mb-1">GOLD</div>
+          <div className="col-span-5 lg:col-span-1 mb-3">
+            <div className="text-4xl font-bold text-[#B9F2FF] mb-1">DIAMOND</div>
             <ul className="text-2xl font-bold">
               <li>- am</li>
               <li>- ae</li>
@@ -54,7 +107,7 @@ export default async function Sponsors() {
               <li>- a</li>
             </ul>
           </div>
-        </div> */}
+        </div>
         <h4 className={classNames('text-6xl font-bold mb-4 mt-4', styles.titleShadow)}>CURRENT SPONSORS</h4>
         <h5 className='text-5xl font-bold mb-20 mt-4'>Coming Soon!</h5>
         <div className="grid grid-cols-2 mx-auto max-w-5xl">
