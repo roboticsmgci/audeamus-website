@@ -13,3 +13,7 @@
 - Add animation on home page load
 - Different themes?
 - Improve SEO and accessibility
+
+## Old Site
+
+Looking for the old site? Check out the [archived site](http://web.archive.org/web/20230831234151/http://mgcirobotics.com/) or the [GitHub repo](https://github.com/roboticsmgci/roboticsmgci.github.io).
