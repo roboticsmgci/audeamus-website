@@ -1,13 +1,14 @@
 'use client';
 
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import { useEffect } from 'react';
 import PageTitle from '@/components/page-title';
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'Learn more about the MGCI Robotics team. Meet our members, view our achievements, and explore the club\'s history.',
-};
+// export const metadata: Metadata = {
+//   title: 'About',
+//   description: 'Learn more about the MGCI Robotics team. Meet our members, view our achievements,
+// and explore the club\'s history.',
+// };
 
 export default function About() {
   useEffect(() => {
