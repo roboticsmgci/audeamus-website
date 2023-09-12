@@ -9,7 +9,10 @@ import './globals.css';
 const barlow = Barlow_Semi_Condensed({ weight: ['400', '700'], subsets: ['latin'], style: ['normal', 'italic'] });
 
 export const metadata: Metadata = {
-  title: 'MGCI Robotics',
+  title: {
+    template: '%s | MGCI Robotics',
+    default: 'MGCI Robotics',
+  },
   description: 'This is the website for MGCI Robotics, Marc Garneau Collegiate Institute\'s Robotics Club. We are also known as FRC Team 8574.',
 };
 

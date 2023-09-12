@@ -7,6 +7,22 @@ import contentfulClient from '@/lib/contentful';
 import { AuthorSkeleton, BlogPostSkeleton } from '@/types/contentful';
 import BlogImage from '@/components/blog-image';
 
+export async function generateMetadata({ params }: { params: { slug: string }}) {
+  const response = await contentfulClient.withoutUnresolvableLinks.getEntries<BlogPostSkeleton>({
+    content_type: 'blogPost',
+    'fields.slug[in]': [params.slug],
+  });
+
+  if (response.items.length === 0) {
+    return {};
+  }
+
+  const blogPost = response.items[0];
+  return {
+    title: blogPost.fields.title,
+  };
+}
+
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => (

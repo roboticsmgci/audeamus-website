@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
 import contentfulClient from '@/lib/contentful';
 import { AlbumSkeleton } from '@/types/contentful';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../home.module.css';
+
+export const metadata: Metadata = {
+  title: 'Gallery',
+};
 
 export default async function Gallery() {
   const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({

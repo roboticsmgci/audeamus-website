@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -8,6 +9,10 @@ import contentfulClient from '@/lib/contentful';
 import { BlogPostSkeleton } from '@/types/contentful';
 import BlogImage from '@/components/blog-image';
 import PageTitle from '@/components/page-title';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+};
 
 const renderOptions = {
   renderNode: {

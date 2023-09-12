@@ -1,7 +1,12 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { useEffect } from 'react';
 import PageTitle from '@/components/page-title';
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default function About() {
   useEffect(() => {

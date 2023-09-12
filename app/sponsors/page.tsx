@@ -1,7 +1,12 @@
+import type { Metadata } from 'next';
 import classNames from 'classnames';
 import Link from 'next/link';
 import PageTitle from '@/components/page-title';
 import styles from '../home.module.css';
+
+export const metadata: Metadata = {
+  title: 'Sponsors',
+};
 
 export default async function Sponsors() {
   return (

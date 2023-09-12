@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import classNames from 'classnames';
 import RecentResults from '@/components/recent-results';
 import Image from 'next/image';
@@ -7,6 +8,10 @@ import InstagramEmbed from '@/components/instagram-embed';
 import styles from './home.module.css';
 
 export const revalidate = 120;
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default async function Home() {
   return (

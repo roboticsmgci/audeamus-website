@@ -4,6 +4,22 @@ import { AlbumSkeleton } from '@/types/contentful';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({ params }: { params: { slug: string }}) {
+  const response = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({
+    content_type: 'album',
+    'fields.slug[in]': [params.slug],
+  });
+
+  if (response.items.length === 0) {
+    return {};
+  }
+
+  const album = response.items[0];
+  return {
+    title: album.fields.title,
+  };
+}
+
 export async function generateStaticParams() {
   const entries = await contentfulClient.withoutUnresolvableLinks.getEntries<AlbumSkeleton>({ content_type: 'album' });
 
