@@ -10,7 +10,8 @@ import styles from './home.module.css';
 export const revalidate = 120;
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'MGCI Robotics',
+  description: 'We are MGCI Robotics, Marc Garneau Collegiate Institute\'s robotics club. We are also known as Audeamus 8574.',
 };
 
 export default async function Home() {

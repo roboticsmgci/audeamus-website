@@ -6,6 +6,7 @@ import styles from '../home.module.css';
 
 export const metadata: Metadata = {
   title: 'Sponsors',
+  description: 'Learn more about MGCI Robotics\' sponsorship tiers and download our Sponsorship Package and Team Resume.',
 };
 
 export default async function Sponsors() {

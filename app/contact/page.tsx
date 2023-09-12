@@ -4,6 +4,7 @@ import PageTitle from '@/components/page-title';
 
 export const metadata: Metadata = {
   title: 'Contact',
+  description: 'Get in touch with the MGCI Robotics team. Contact us about sponsorship, joining our club, or other inquiries.',
 };
 
 export default function Contact() {

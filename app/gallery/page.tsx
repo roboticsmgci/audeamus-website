@@ -8,6 +8,7 @@ import styles from '../home.module.css';
 
 export const metadata: Metadata = {
   title: 'Gallery',
+  description: 'View photos from MGCI Robotics events and meetings, organized into albums.',
 };
 
 export default async function Gallery() {

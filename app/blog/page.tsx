@@ -12,6 +12,7 @@ import PageTitle from '@/components/page-title';
 
 export const metadata: Metadata = {
   title: 'Blog',
+  description: 'Read blog posts from the MGCI Robotics team. See what we\'ve been working on.',
 };
 
 const renderOptions = {

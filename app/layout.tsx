@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     template: '%s | MGCI Robotics',
     default: 'MGCI Robotics',
   },
-  description: 'This is the website for MGCI Robotics, Marc Garneau Collegiate Institute\'s Robotics Club. We are also known as FRC Team 8574.',
 };
 
 export default function RootLayout({
