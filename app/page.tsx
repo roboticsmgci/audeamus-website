@@ -146,7 +146,7 @@ export default async function Home() {
           </div>
         </div>
       </main>
-      <div className="col-span-3 lg:col-span-1 lg:border-l-2 bg-[#313137] px-3 pt-4">
+      <div className="col-span-3 lg:col-span-1 lg:border-l-2 bg-[#313137] sm:px-3 pt-4">
         <h3 className="underline text-xl text-center mb-2">
           Latest Instagram Post
         </h3>
