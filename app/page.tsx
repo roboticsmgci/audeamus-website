@@ -22,6 +22,7 @@ export default async function Home() {
           <Image
             src="/team.webp"
             fill
+            sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 67vw, 75vw"
             className="object-cover"
             alt="Team photo"
             priority
