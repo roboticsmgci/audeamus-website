@@ -100,6 +100,7 @@ export default async function Home() {
             <Image
               src="/8574-logo.png"
               fill
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 34vw, (max-width: 1341px) 17vw, 280px"
               className={classNames('object-contain', styles.dropShadow)}
               alt="Audeamus Logo"
             />
@@ -136,6 +137,7 @@ export default async function Home() {
               <Image
                 src="/competition-photo.jpg"
                 fill
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 34vw, (max-width: 1341px) 17vw, 248px"
                 className="object-contain border-4 border-black"
                 alt="Competition Photo"
               />
