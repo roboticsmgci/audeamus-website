@@ -75,11 +75,11 @@ export default async function Sponsors() {
         <div className="grid grid-cols-2 mx-auto max-w-5xl">
           <div className="flex items-center flex-col col-span-2 lg:col-span-1 mb-5">
             <h3 className={classNames('text-3xl font-bold mb-2 text-center', styles.textShadow)}>Sponsorship Package:</h3>
-            <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="/MGCI Robotics Club Resume 2023.pdf" download>Download</Link>
+            <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="/MGCI Robotics Sponsorship Package 2023-2024.pdf" download>Download</Link>
           </div>
           <div className="flex items-center flex-col col-span-2 lg:col-span-1 mb-5">
             <h3 className={classNames('text-3xl font-bold mb-2 text-center', styles.textShadow)}>Club Resume:</h3>
-            <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="/MGCI Robotics Sponsorship Package 2023-2024.pdf" download>Download</Link>
+            <Link target="_blank" className="italic bg-red-600 mx-auto text-3xl font-bold px-3 py-2 rounded-xl" href="/MGCI Robotics Club Resume 2023.pdf" download>Download</Link>
           </div>
         </div>
       </main>
