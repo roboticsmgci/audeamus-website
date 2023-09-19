@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function Sponsors() {
   return (
     <>
-      <PageTitle imageSrc="/team.webp" title="SPONSORS" imageAlt="Team photo" />
+      <PageTitle imageSrc="/worlds-team.jpg" title="SPONSORS" imageAlt="Team photo" />
       <main className="container mx-auto px-5">
         <h3 className={classNames('text-4xl font-bold text-center mb-2 mt-4', styles.textShadow)}>Thank you for your interest in sponsoring Audeamus!</h3>
         <p className="text-2xl font-bold text-center mt-4 mb-8">
