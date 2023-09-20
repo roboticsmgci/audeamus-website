@@ -49,7 +49,7 @@ export default async function Blog() {
     <>
       <PageTitle imageSrc="/blog-image.webp" title="BLOG" imageAlt="Team photo" />
       <div className="container mx-auto grid grid-cols-4 gap-x-10 px-5">
-        <main className="order-last lg:order-none col-span-4 lg:col-span-3">
+        <main className="order-last lg:order-none col-span-4 lg:col-span-3 pb-5">
           {blogPosts.slice(0, 2).map((blogPost) => (
             <div className="rounded-3xl overflow-hidden mt-5" key={blogPost.fields.slug} id={blogPost.fields.slug}>
               <div className="bg-gray-500 flex pl-1 pr-4 py-4 items-center">
