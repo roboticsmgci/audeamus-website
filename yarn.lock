@@ -126,22 +126,22 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@13.5.1":
-  version "13.5.1"
-  resolved "https://registry.npmjs.org/@next/env/-/env-13.5.1.tgz"
-  integrity sha512-CIMWiOTyflFn/GFx33iYXkgLSQsMQZV4jB91qaj/TfxGaGOXxn8C1j72TaUSPIyN7ziS/AYG46kGmnvuk1oOpg==
+"@next/env@13.5.2":
+  version "13.5.2"
+  resolved "https://registry.npmjs.org/@next/env/-/env-13.5.2.tgz"
+  integrity sha512-dUseBIQVax+XtdJPzhwww4GetTjlkRSsXeQnisIJWBaHsnxYcN2RGzsPHi58D6qnkATjnhuAtQTJmR1hKYQQPg==
 
-"@next/eslint-plugin-next@13.5.1":
-  version "13.5.1"
-  resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.5.1.tgz"
-  integrity sha512-LBlI3iQvlzRE7Y6AfIyHKuM4T6REGmFgweN2tBqEUVEfgxERBLOutV2xckXEp3Y3VbfJBBXKZNfDzs20gHimSg==
+"@next/eslint-plugin-next@13.5.2":
+  version "13.5.2"
+  resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.5.2.tgz"
+  integrity sha512-Ew8DOUerJYGRo8pI84SVwn9wxxx8sH92AanCXSkkLJM2W0RJEWy+BqWSCfrlA/3ZIczEl4l4o4lOeTGBPYfBJg==
   dependencies:
     glob "7.1.7"
 
-"@next/swc-win32-x64-msvc@13.5.1":
-  version "13.5.1"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.5.1.tgz"
-  integrity sha512-+9XBQizy7X/GuwNegq+5QkkxAPV7SBsIwapVRQd9WSvvU20YO23B3bZUpevdabi4fsd25y9RJDDncljy/V54ww==
+"@next/swc-win32-x64-msvc@13.5.2":
+  version "13.5.2"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.5.2.tgz"
+  integrity sha512-LfTHt+hTL8w7F9hnB3H4nRasCzLD/fP+h4/GUVBTxrkMJOnh/7OZ0XbYDKO/uuWwryJS9kZjhxcruBiYwc5UDw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -889,12 +889,12 @@ eslint-config-airbnb-base@^15.0.0:
     object.entries "^1.1.5"
     semver "^6.3.0"
 
-eslint-config-next@^13.5.1:
-  version "13.5.1"
-  resolved "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.5.1.tgz"
-  integrity sha512-+8xIIWtD+iFwHfXgmXRGn05BuNIu/RAGcz6kI4wsJTPrE/1WtWKv2o0l+GbQ6wRaC+cbBV8+QnFAOf18aJiWrg==
+eslint-config-next@^13.5.2:
+  version "13.5.2"
+  resolved "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.5.2.tgz"
+  integrity sha512-kCF7k7fHBtFtxfP6J6AP6Mo0vW3CrFeoIuoZ7NHGIvLFc/RUaIspJ6inO/R33zE1o9t/lbJgTnsqnRB++sxCUQ==
   dependencies:
-    "@next/eslint-plugin-next" "13.5.1"
+    "@next/eslint-plugin-next" "13.5.2"
     "@rushstack/eslint-patch" "^1.3.3"
     "@typescript-eslint/parser" "^5.4.2 || ^6.0.0"
     eslint-import-resolver-node "^0.3.6"
@@ -1884,12 +1884,12 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^13.5.1:
-  version "13.5.1"
-  resolved "https://registry.npmjs.org/next/-/next-13.5.1.tgz"
-  integrity sha512-GIudNR7ggGUZoIL79mSZcxbXK9f5pwAIPZxEM8+j2yLqv5RODg4TkmUlaKSYVqE1bPQueamXSqdC3j7axiTSEg==
+next@^13.5.2:
+  version "13.5.2"
+  resolved "https://registry.npmjs.org/next/-/next-13.5.2.tgz"
+  integrity sha512-vog4UhUaMYAzeqfiAAmgB/QWLW7p01/sg+2vn6bqc/CxHFYizMzLv6gjxKzl31EVFkfl/F+GbxlKizlkTE9RdA==
   dependencies:
-    "@next/env" "13.5.1"
+    "@next/env" "13.5.2"
     "@swc/helpers" "0.5.2"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001406"
@@ -1898,15 +1898,15 @@ next@^13.5.1:
     watchpack "2.4.0"
     zod "3.21.4"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "13.5.1"
-    "@next/swc-darwin-x64" "13.5.1"
-    "@next/swc-linux-arm64-gnu" "13.5.1"
-    "@next/swc-linux-arm64-musl" "13.5.1"
-    "@next/swc-linux-x64-gnu" "13.5.1"
-    "@next/swc-linux-x64-musl" "13.5.1"
-    "@next/swc-win32-arm64-msvc" "13.5.1"
-    "@next/swc-win32-ia32-msvc" "13.5.1"
-    "@next/swc-win32-x64-msvc" "13.5.1"
+    "@next/swc-darwin-arm64" "13.5.2"
+    "@next/swc-darwin-x64" "13.5.2"
+    "@next/swc-linux-arm64-gnu" "13.5.2"
+    "@next/swc-linux-arm64-musl" "13.5.2"
+    "@next/swc-linux-x64-gnu" "13.5.2"
+    "@next/swc-linux-x64-musl" "13.5.2"
+    "@next/swc-win32-arm64-msvc" "13.5.2"
+    "@next/swc-win32-ia32-msvc" "13.5.2"
+    "@next/swc-win32-x64-msvc" "13.5.2"
 
 node-releases@^2.0.13:
   version "2.0.13"
