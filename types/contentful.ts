@@ -1,17 +1,20 @@
 import * as contentful from 'contentful';
 
+export type SubteamSkeleton = {
+  contentTypeId: 'subteam'
+  fields: {
+    name: contentful.EntryFieldTypes.Text
+  }
+}
+
 export type AuthorSkeleton = {
   contentTypeId: 'author'
   fields: {
     name: contentful.EntryFieldTypes.Text
     profilePicture: contentful.EntryFieldTypes.AssetLink
-  }
-}
-
-export type SubteamSkeleton = {
-  contentTypeId: 'subteam'
-  fields: {
-    name: contentful.EntryFieldTypes.Text
+    lead: contentful.EntryFieldTypes.Boolean
+    subteams: contentful.EntryFieldTypes.Array<
+      contentful.EntryFieldTypes.EntryLink<SubteamSkeleton>>;
   }
 }
 
