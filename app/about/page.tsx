@@ -10,7 +10,7 @@ import styles from './about.module.css';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about the MGCI Robotics team. Meet our members, view our achievements, and explore the club\'s history.',
+  description: 'Meet the members of the MGCI Robotics team, organized by subteam.',
 };
 
 const subteams = {
@@ -72,7 +72,7 @@ export default async function About() {
           <div>
             <h3 className={classNames('text-4xl font-bold', styles.smallHeadingShadow)}>Members</h3>
             {Object.keys(subteams).filter((subteam) => subteam !== 'Captain').map((subteam) => (
-              <React.Fragment key={subteam}>
+              <div key={subteam} className="mb-5">
                 <h3 className="text-2xl font-bold italic underline mt-4">{subteam.toUpperCase()}</h3>
                 {entries.items
                   .filter((member) => !member.fields.lead
@@ -81,7 +81,7 @@ export default async function About() {
                   .map((member, i) => (
                     <div className="inline-block w-1/2 text-xl" key={i}>{member.fields.name}</div>
                   ))}
-              </React.Fragment>
+              </div>
             ))}
           </div>
         </div>
