@@ -5,6 +5,7 @@ import Image from 'next/image';
 import contentfulClient from '@/lib/contentful';
 import { AuthorSkeleton } from '@/types/contentful';
 import React from 'react';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
@@ -51,13 +52,16 @@ export default async function About() {
             <h3 className={classNames('text-4xl font-bold mb-5', styles.smallHeadingShadow)}>Execs</h3>
             {[...captains, ...execs].map((member, i) => (
               <div key={i} className={classNames(subteams[member.fields.subteams[0]!.fields.name as Subteam], 'p-2 rounded-3xl flex mb-5 max-w-sm')}>
-                <Image
-                  src={member.fields.profilePicture?.fields.file?.url ? `https:${member.fields.profilePicture?.fields.file?.url}` : '/logo-black-bg.png'}
-                  alt="Profile picture"
-                  width={64}
-                  height={64}
-                  className="rounded-full border-white border-2"
-                />
+                {member.fields.profilePicture?.fields.file?.url
+                  ? <Image
+                      src={`https:${member.fields.profilePicture!.fields.file!.url}`}
+                      alt="Profile picture"
+                      width={64}
+                      height={64}
+                      className="rounded-full border-white border-2"
+                    />
+                  : <UserCircleIcon className="w-16 h-16 rounded-full fill-white p-0" />
+                }
                 <div className="pl-3 py-1">
                   <h4 className="text-xl font-bold">{member.fields.name}</h4>
                   <p className="italic text-gray-300 font-bold">{member.fields.subteams[0]!.fields.name}</p>
