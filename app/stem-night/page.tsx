@@ -17,7 +17,7 @@ export default function StemNight() {
         <div className="flex flex-wrap gap-x-20 gap-y-5 justify-center">
           <div className="flex flex-col items-center">
             <MapPinIcon title="Where" className="w-10 h-10" />
-            <p className="text-xl mb-5">Marc Garneau Collegiate Institute</p>
+            <p className="text-xl mb-5">Marc Garneau Collegiate Institute<br />135 Overlea Blvd</p>
           </div>
           <div className="flex flex-col items-center">
             <CalendarIcon title="Date" className="w-10 h-10" />
