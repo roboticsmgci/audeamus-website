@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'STEM Night',
-  description: 'Learn about STEM Night: what it is, where it is, and how to get a ticket!',
+  description: 'Learn about STEM Night: what it is, where it is, how to volunteer, and how to get a ticket!',
 };
 
 export default function StemNight() {
