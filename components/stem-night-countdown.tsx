@@ -2,6 +2,7 @@
 
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function StemNightCountdown() {
@@ -37,7 +38,7 @@ export default function StemNightCountdown() {
         <div className="text-lg sm:text-xl">minutes</div>
         <div className="text-lg sm:text-xl">seconds</div>
       </div>
-      <div className="mt-5">More info coming soon!</div>
+      <Link className="mt-5 text-blue-100 hover:text-blue-200 underline" href="/stem-night">Click here for more info!</Link>
       <button className="absolute right-2 top-2" onClick={() => setVisible(false)}><XMarkIcon className="w-5 h-5" /></button>
     </div>
   );

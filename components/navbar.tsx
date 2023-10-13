@@ -14,6 +14,7 @@ const navigation = [
   { name: 'GALLERY', href: '/gallery' },
   { name: 'BLOG', href: '/blog' },
   { name: 'CONTACT', href: '/contact' },
+  { name: 'STEM NIGHT', href: '/stem-night' },
 ];
 
 const socialMedia = [
@@ -29,7 +30,7 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute top-0 inset-y-0 left-1 flex items-center md:hidden">
+            <div className="absolute top-0 inset-y-0 left-1 flex items-center lg:hidden">
               <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-red-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
@@ -39,7 +40,7 @@ export default function Navbar() {
                 )}
               </Disclosure.Button>
             </div>
-            <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+            <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
               <div className="flex flex-shrink-0 items-center">
                 <Image
                   width={72}
@@ -48,7 +49,7 @@ export default function Navbar() {
                   alt="MGCI Robotics"
                 />
               </div>
-              <div className="hidden md:ml-6 md:flex space-x-4 my-auto grow">
+              <div className="hidden lg:ml-6 lg:flex space-x-4 my-auto grow">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -63,7 +64,7 @@ export default function Navbar() {
                   </Link>
                 ))}
               </div>
-              <div className="hidden md:ml-6 md:flex space-x-4 items-center mr-5">
+              <div className="hidden lg:ml-6 lg:flex space-x-4 items-center mr-5">
                 {socialMedia.map((item) => (
                   <Link
                     key={item.name}
@@ -77,7 +78,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="md:hidden">
+          <Disclosure.Panel className="lg:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
