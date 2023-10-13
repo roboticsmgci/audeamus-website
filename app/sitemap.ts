@@ -54,6 +54,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly',
       priority: 0.8,
     },
+    {
+      url: `${baseURL}/stem-night`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
     ...blogPostsResponse.items.map((blogPost) => ({
       url: `${baseURL}/blog/${blogPost.fields.slug}`,
       lastModified: blogPost.sys.updatedAt,
