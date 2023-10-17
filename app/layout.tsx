@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 // eslint-disable-next-line camelcase
 import { Barlow_Semi_Condensed } from 'next/font/google';
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={classNames(barlow.className, 'text-white min-h-screen')}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
