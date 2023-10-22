@@ -35,14 +35,14 @@ export default function StemNight() {
             href="https://docs.google.com/forms/d/1WXYabQFbUaXx9ZrBFKM-uDGSmsS4m4w-M7qU-rvLa_Q/viewform"
             target="_blank"
           >
-            Volunteer Signup
+            Tickets
           </Link>
           <Link
             className="sm:mr-5 md:mr-28 text-2xl bg-blue-700 px-3 py-2 font-bold italic rounded-lg hover:underline hover:bg-blue-800"
             href="https://docs.google.com/forms/d/e/1FAIpQLSfQEbAj1r8C_XzOvN2yE04_xXySFNwuq0mn5sv75370HfIwXw/viewform"
             target="_blank"
           >
-            Tickets
+            Volunteer Signup
           </Link>
         </div>
       </main>
