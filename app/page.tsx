@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      <StemNightCountdown />
       <div className="grid grid-cols-3 2xl:grid-cols-4">
         <main className="col-span-3 lg:col-span-2 2xl:col-span-3">
           <div className="font-glacialindifferencebold w-full h-96 overflow-hidden relative">
