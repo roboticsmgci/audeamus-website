@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import InstagramEmbed from '@/components/instagram-embed';
 
-import StemNightCountdown from '@/components/stem-night-countdown';
 import styles from './home.module.css';
 
 export const revalidate = 120;

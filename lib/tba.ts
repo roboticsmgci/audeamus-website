@@ -26,6 +26,7 @@ export default async function getRecentMatches(count: number) {
   eTag = response.headers.get('ETag')!;
 
   let data;
+  console.log(response.status);
   if (response.status === 304) {
     data = lastResponse as MatchSimple[];
   } else {

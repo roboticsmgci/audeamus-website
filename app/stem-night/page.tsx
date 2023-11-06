@@ -1,7 +1,6 @@
 import PageTitle from '@/components/page-title';
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'STEM Night',
@@ -28,23 +27,7 @@ export default function StemNight() {
             <p className="text-xl mb-5">5:00 PM - 8:00 PM</p>
           </div>
         </div>
-        <h2 className="font-bold text-4xl mt-6">Links:</h2>
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 px-4 mx-auto my-5">
-          <Link
-            className="sm:ml-5 md:ml-28 text-2xl bg-red-700 px-3 py-2 font-bold italic rounded-lg hover:underline hover:bg-red-800"
-            href="https://docs.google.com/forms/d/1WXYabQFbUaXx9ZrBFKM-uDGSmsS4m4w-M7qU-rvLa_Q/viewform"
-            target="_blank"
-          >
-            Tickets
-          </Link>
-          <Link
-            className="sm:mr-5 md:mr-28 text-2xl bg-blue-700 px-3 py-2 font-bold italic rounded-lg hover:underline hover:bg-blue-800"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfQEbAj1r8C_XzOvN2yE04_xXySFNwuq0mn5sv75370HfIwXw/viewform"
-            target="_blank"
-          >
-            Volunteer Signup
-          </Link>
-        </div>
+        <h2 className="font-bold text-4xl my-6">Registration has now closed. Thank you for coming to STEM Night 2023!</h2>
       </main>
     </>
   );
