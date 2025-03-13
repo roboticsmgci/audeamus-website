@@ -12,7 +12,7 @@ export default function StemNight() {
     <>
       <PageTitle imageSrc="/showcase-photo.webp" title="STEM NIGHT" imageAlt="Team logo" />
       <main className="container mx-auto px-5 flex flex-col items-center pt-5">
-        <p className="text-2xl mb-8 max-w-3xl text-center">Join us and learn more about robotics and STEM, have fun, and get volunteer hours. We&apos;ll have a presentation, a variety of workshops, and food!</p>
+        <p className="text-2xl mb-8 max-w-3xl text-center">Join us to learn more about STEM and to have a night full of fun! We&apos;ll have a presentation, guest speakers, a variety of workshops, and food!</p>
         <div className="flex flex-wrap gap-x-20 gap-y-5 justify-center">
           <div className="flex flex-col items-center">
             <MapPinIcon title="Where" className="w-10 h-10" />
@@ -20,14 +20,15 @@ export default function StemNight() {
           </div>
           <div className="flex flex-col items-center">
             <CalendarIcon title="Date" className="w-10 h-10" />
-            <p className="text-xl mb-5">November 2, 2023</p>
+            <p className="text-xl mb-5">April 9, 2025</p>
           </div>
           <div className="flex flex-col items-center">
             <ClockIcon title="Time" className="w-10 h-10" />
             <p className="text-xl mb-5">5:00 PM - 8:00 PM</p>
           </div>
         </div>
-        <h2 className="font-bold text-4xl my-6">Registration has now closed. Thank you for coming to STEM Night 2023!</h2>
+        {/* <h2 className="font-bold text-4xl my-6">Registration has now closed.
+        Thank you for coming to STEM Night 2023!</h2> */}
       </main>
     </>
   );

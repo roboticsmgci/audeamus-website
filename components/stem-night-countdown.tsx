@@ -12,7 +12,7 @@ export default function StemNightCountdown() {
   useEffect(() => {
     const interval = setInterval(() => {
       const currentTime = new Date();
-      const stemNightTime = new Date('2023-11-02T17:00:00-04:00');
+      const stemNightTime = new Date('2025-04-09T17:00:00-04:00');
       const newSeconds = (stemNightTime.valueOf() - currentTime.valueOf()) / 1000;
 
       if (newSeconds > 0) {

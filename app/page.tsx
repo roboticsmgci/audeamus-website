@@ -4,6 +4,7 @@ import RecentResults from '@/components/recent-results';
 import Image from 'next/image';
 import Link from 'next/link';
 import InstagramEmbed from '@/components/instagram-embed';
+import StemNightCountdown from '../components/stem-night-countdown';
 import styles from './home.module.css';
 
 export const revalidate = 120;
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
+   <StemNightCountdown />
       <div className="grid grid-cols-3 2xl:grid-cols-4">
         <main className="col-span-3 lg:col-span-2 2xl:col-span-3">
           <div className="font-glacialindifferencebold w-full h-96 overflow-hidden relative">
